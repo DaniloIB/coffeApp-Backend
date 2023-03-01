@@ -18,9 +18,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/clientes")
+@RequestMapping("clientes")
 //@CrossOrigin(origins = "http://localhost:4200/")
-@CrossOrigin(origins = "https://coffeapp-187c9.web.app")
+@CrossOrigin(origins="https://coffeapp-187c9.web.app/")
 
 public class ClienteController {
 

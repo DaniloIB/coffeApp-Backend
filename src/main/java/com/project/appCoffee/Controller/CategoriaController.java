@@ -15,9 +15,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/categorias")
+@RequestMapping("categorias")
 //@CrossOrigin(origins = "http://localhost:4200/")
-@CrossOrigin(origins = "https://coffeapp-187c9.web.app")
+@CrossOrigin(origins="https://coffeapp-187c9.web.app/")
 
 public class CategoriaController {
     
@@ -30,14 +30,14 @@ public class CategoriaController {
         return new ResponseEntity(sCategoria.listaCategoria(), HttpStatus.OK);
     }
     
-    @GetMapping("detail/{id}")
+    @GetMapping("/detail/{id}")
     public ResponseEntity<Categoria> traerCategoria( @PathVariable("id") int id ){
         Categoria cate = sCategoria.traerCategoria(id).get();
         return new ResponseEntity(cate, HttpStatus.OK);
 
     } 
     
-    @DeleteMapping("eliminar/{id}")
+    @DeleteMapping("/eliminar/{id}")
     public ResponseEntity<?> eliminarCategoria(@PathVariable("id") int id){
         sCategoria.eliminarCategoria(id);
         return new ResponseEntity("Categoria eliminada", HttpStatus.OK );
