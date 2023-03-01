@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("productos")
 //@CrossOrigin(origins = "http://localhost:4200/")
-@CrossOrigin(origins="https://coffeapp-187c9.web.app/")
+@CrossOrigin(origins="https://coffee-app-2.web.app/")
 
 
 public class ProductoController {
